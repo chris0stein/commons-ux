@@ -172,6 +172,7 @@ a {
     color: #2ba6cb;
 }
 
+
 /* END COMMONS CSS  ------------------------------------- */
 main{
     background-color: #fff;
@@ -185,6 +186,11 @@ main:after {
   content: "";
   display: table;
   clear: both;
+}
+
+
+.button a, .button a:link, .button a:visited {
+    color: #fff;
 }
 
 .profile{
