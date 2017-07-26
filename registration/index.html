@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Process</title>
+    <link rel="stylesheet" href="main.css"> </head>
+
+<body class="cacap">
+    <main id="content">
+        <form action="" name="signup_form" id="signup_form" class="standard-form" method="post" enctype="multipart/form-data">
+            <h2 class="pagetitle">CUNY Academic Commons Registration</h2>
+            <div class="register-section" id="basic-details-section">
+                <!--                <h3>Account Details</h3>-->
+                <label for="signup_username">Username <em>(required)</em> <span style="font-weight: normal"> — You will use this to log in. Your username will be publicly visible by all visitors. Commons members will also be able to use it to send quick notes (aka mentions) to you.</span> </label>
+                <input type="text" name="signup_username" id="signup_username" value="">
+                <p class="description">Usernames must contain at least 4 characters and must begin with a letter. Only lowercase letters (a-z) and numbers (0-9) are allowed — no spaces or special characters.</p>
+                <div class="editfield">
+                    <label for="field_1">Full Name <em>(required)</em></label>
+                    <input type="text" name="field_1" id="field_1" value="">
+                    <p class="description"></p>
+                </div>
+                <label for="signup_email">Email Address <em>(required)</em> <span style="font-weight: normal">—   Must be a CUNY email address</span></label>
+                <input type="text" name="signup_email" id="signup_email" value="">
+                <label for="signup_password">Choose a Password <em>(required)</em></label>
+                <input type="password" name="signup_password" id="signup_password" value="">
+                <label for="signup_password_confirm">Confirm Password <em>(required)</em></label>
+                <input type="password" name="signup_password_confirm" id="signup_password_confirm" value=""> </div>
+            <!-- end .account -->
+            <div class="profile">
+                <!--
+                <div class="bp-avatar-nav">
+                    <ul class="avatar-nav-items">
+                        <li class="avatar-nav-item current" id="bp-avatar-upload"> <a href="#" class="bp-avatar-nav-item" data-nav="upload">Upload</a> </li>
+                        <li class="avatar-nav-item" id="bp-avatar-camera"> <a href="#" class="bp-avatar-nav-item" data-nav="camera">Take Photo</a> </li>
+                        <li class="avatar-nav-item" id="bp-avatar-delete"> <a href="#" class="bp-avatar-nav-item" data-nav="delete">Delete</a> </li>
+                    </ul>
+                </div>
+-->
+                <div class="profile-image">
+                    <div class="bp-avatar">
+                        <h4>Choose a profile image</h4>
+                        <div class="bp-uploader-window">
+                            <div id="bp-upload-ui" style="position: relative;" class="drag-drop">
+                                <div id="drag-drop-area" style="position: relative;">
+                                    <div class="drag-drop-inside">
+                                        <p class="drag-drop-info">Drop your file here</p>
+                                        <p>or</p>
+                                        <p class="drag-drop-buttons">
+                                            <!--                                        <label for="bp-browse-button" class="bp-screen-reader-text">Select your File</label>-->
+                                            <input id="bp-browse-button" type="button" value="Select your File" class="button" style="z-index: 1;"> </p>
+                                    </div>
+                                </div>
+                                <div id="html5_1blgj2ckk1ddp6541pdfrtmr0c5_container" class="moxie-shim moxie-shim-html5" style="position: absolute; top: 84px; left: 351px; width: 144px; height: 26px; overflow: hidden; z-index: 0;">
+                                    <input id="html5_1blgj2ckk1ddp6541pdfrtmr0c5" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" accept=""> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="editfield">
+                    <label for="field_332">Brief Descriptor </label>
+                    <input type="text" name="field_332" id="field_332" value="">
+                    <p class="description">A one-line summary of who you are and what you do at CUNY.</p>
+                </div>
+                <label for="cacap-position-new-college">College</label>
+                <select class="cacap-position-field-college" name="cacap[college]" id="cacap-position-new-college">
+                    <option value="*Non-CUNY">*Non-CUNY</option>
+                    <option value="Baruch College">Baruch College</option>
+                    <option value="Borough of Manhattan Community College">Borough of Manhattan Community College</option>
+                    <option value="Bronx Community College">Bronx Community College</option>
+                    <option value="Brooklyn College">Brooklyn College</option>
+                    <option value="City College of New York">City College of New York</option>
+                    <option value="College of Staten Island">College of Staten Island</option>
+                    <option value="CUNY Central">CUNY Central</option>
+                    <option value="CUNY Graduate Center">CUNY Graduate Center</option>
+                    <option value="CUNY Graduate School of Journalism">CUNY Graduate School of Journalism</option>
+                    <option value="CUNY School of Law">CUNY School of Law</option>
+                    <option value="CUNY School of Professional Studies">CUNY School of Professional Studies</option>
+                    <option value="CUNY School of Public Health">CUNY School of Public Health</option>
+                    <option value="Hostos Community College">Hostos Community College</option>
+                    <option value="Hunter College">Hunter College</option>
+                    <option value="John Jay College of Criminal Justice">John Jay College of Criminal Justice</option>
+                    <option value="Kingsborough Community College">Kingsborough Community College</option>
+                    <option value="LaGuardia Community College">LaGuardia Community College</option>
+                    <option value="Lehman College">Lehman College</option>
+                    <option value="Macaulay Honors College">Macaulay Honors College</option>
+                    <option value="Medgar Evers College">Medgar Evers College</option>
+                    <option value="NYC College of Technology">NYC College of Technology</option>
+                    <option value="Queens College">Queens College</option>
+                    <option value="Queensborough Community College">Queensborough Community College</option>
+                    <option value="Sophie Davis School of Biomedical Education">Sophie Davis School of Biomedical Education</option>
+                    <option value="Stella and Charles Guttman Community College">Stella and Charles Guttman Community College</option>
+                    <option value="Teacher Academy">Teacher Academy</option>
+                    <option value="York College">York College</option>
+                </select>
+                <div class="editfield">
+                    <div class="checkbox"> <span class="label">Role <em>(required)</em> check all that apply</span>
+                        <div id="field_230" class="input-options checkbox-options">
+                            <div class="input-options-1">
+                                <label for="field_366_0" class="option-label">
+                                    <input type="checkbox" name="field_230[]" id="field_366_0" value="Administrator">Administrator</label>
+                                <label for="field_365_2" class="option-label">
+                                    <input type="checkbox" name="field_230[]" id="field_365_2" value="Faculty">Faculty</label>
+                                <label for="field_367_6" class="option-label">
+                                    <input type="checkbox" name="field_230[]" id="field_367_6" value="Staff">Staff</label>
+                                <label for="field_370_4" class="option-label">
+                                    <input type="checkbox" name="field_230[]" id="field_370_4" value="Other">Other</label>
+                            </div>
+                            <div class="input-options-2">
+                                <label for="field_371_1" class="option-label">
+                                    <input type="checkbox" name="field_230[]" id="field_371_1" value="Alumnus/a">Alumnus/a</label>
+                                <label for="field_368_3" class="option-label">
+                                    <input type="checkbox" name="field_230[]" id="field_368_3" value="Graduate Student">Graduate Student</label>
+                                <label for="field_372_5" class="option-label">
+                                    <input type="checkbox" name="field_230[]" id="field_372_5" value="Postdoc">Postdoc</label>
+                                <label for="field_369_7" class="option-label">
+                                    <input type="checkbox" name="field_230[]" id="field_369_7" value="Undergraduate Student">Undergraduate Student</label>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description"></p>
+                </div>
+            </div>
+            <!-- end .profile -->
+            
+            <div id="bp-tos-check">
+                <h3>Terms of Service</h3>
+                <div id="bp-tos-display">
+                    <div id="tos_text" style="overflow: scroll; height: 300px; width: 98%; border: 1px solid rgb(170, 170, 170); padding: 5px;">
+                        <div>
+                            <p>The CUNY Academic Commons is part of the City University of New York. We are dedicated to the free expression of our users in a collaborative and sharing environment. We are a community that seeks to use the Academic Commons as a means of fulfilling our highest aspirations for integrating technology into our teaching, learning, and collaborating. </p>
+                            <p>We reserve only the rights necessary to facilitate the dissemination of content and material on this Site. We support the intellectual property rights of the authors of those materials. We also support the use of open source software and the widespread dissemination and use of online materials consistent with the rights of our users and applicable law. </p>
+                            <p>Members of the faculty, administration, staff, and graduate students of the City University of New York may register on the Site. We will take all reasonable measures to keep information and users safe. </p>
+                            <p>We hope your experience with the CUNY Academic Commons will be enjoyable and productive.</p>
+                            <p>The CUNY Academic Commons is located at <a href="http://commons.gc.cuny.edu/">http://commons.gc.cuny.edu/</a>.</p>
+                            <h2>Terms that Govern the Use of the CUNY Academic Commons.</h2>
+                            <ol>
+                                <li>
+                                    <h3>General Use of the Site and Agreement to these Terms.</h3>
+                                    <p>Please read these Terms of Use carefully as they govern our mutual rights and responsibilities when you use the resources and services provided by the CUNY Academic Commons (also referred to as the “Commons” or “Site” or collectively as “we” or “us” or “our”).</p>
+                                    <p>These Terms of Use, and our <a href="http://commons.gc.cuny.edu/about/privacy/">Privacy Policy</a> (which is incorporated into these terms of use), apply to all activities and modalities on the Site, including but not limited to, Blogs, Forums, Groups, and Wikis.</p>
+                                    <p>If you are a registered user, when you click on the “I Accept Terms of Use” button below, you signify that you have read, understand, and agree to these terms and conditions.</p>
+                                    <p>If you are a non-registered “public” user, accessing the Site signifies that you have read, understand, and agree to these terms. If you do not agree to these terms, you are not authorized to use the Site.</p>
+                                    <p>Unless otherwise agreed to, you are subject to these terms of use, and any additional terms that may apply. These additional terms, if any, will be available through the Site. These terms create a legal agreement between you and the Site and supersede any prior agreements between you and the Site. </p>
+                                    <p>By accessing this Site, you agree to comply with the <a href="http://portal.cuny.edu/cms/id/cuny/documents/level_3_page/001171.htm">CUNY Policy on Acceptable Use of Computer Resources</a>, which includes but is not limited to, requirements that you comply with applicable laws (including, but not limited to, libel, obscenity, and child pornography), assume responsibility for your activities, agree not to harass, disrupt, abuse, or invade the privacy rights of others.</p>
+                                    <p>We may revise or change these terms as necessary or appropriate; the most current version will always be available for users to view on the Site.</p>
+                                </li>
+                                <li>
+                                    <h3>Rights and Obligations Related to Content and Material.</h3>
+                                    <p>The Site and its Contents are protected by copyright pursuant to U.S. and international copyright laws.</p>
+                                    <p>By posting your material on this Site, you are granting the CUNY Academic Commons a nonexclusive, royalty free, perpetual, and worldwide license to use your content on the Site until you remove or delete it, including but not limited to, the right to copy, distribute, transmit, display, perform, reproduce, edit, translate, reformat, and/or incorporate into a collective work. Whenever possible, we will credit you as an author, and you agree to give the CUNY Academic Commons the right to use your name for attribution purposes.</p>
+                                    <p>Unless you specify otherwise, all materials you submit are subject to the Terms and Conditions of the <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons License 3.0 Attribution Non-Commercial Share Alike</a> (which includes a link to the full Creative Commons Legal Code), or any successor or equivalent Creative Commons License.</p>
+                                    <p>Under the terms of this license, RSS aggregators are permitted to copy, distribute, display, and perform any content that you syndicate using RSS.</p>
+                                    <p>If you want to license your work under a different Creative Commons license, you must indicate the license that applies or include your name, the word “copyright” or © symbol</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div id="bp-tos-privacy">
+                        <p>The CUNY Academic Commons also has a Privacy Policy which applies to all members. <a href="http://commons.gc.cuny.edu/about/privacy/">View the Privacy Policy</a></p>
+                    </div>
+                    <div id="tos_accept">
+                        <input type="checkbox" name="bp_tos_agree" value="1"> <span> I agree to these terms of service</span> </div>
+                </div>
+            </div>
+            <!-- END #bp-tos-check -->
+            
+            
+<!--
+            <p class="submit">
+                <input type="submit" name="signup_submit" id="signup_submit" value="Complete Registration →">
+            </p>
+-->
+       <p class="button"><a href="reg-conf.html">Complete Registration</a></p>
+        </form>
+    </main>
+</body>
+
+</html>
