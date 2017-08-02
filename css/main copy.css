@@ -1,0 +1,12 @@
+main{
+    width:95%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    border-bottom: 1px solid blue;
+}
+a:visited{
+    border-bottom-color: #999;
+}
