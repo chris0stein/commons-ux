@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basic Responsive Page</title>
+  <link rel="stylesheet" href="../css/normalize.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+
+</head>
+<body>
+<main>
+<h2><a id="Chris_Invitation_Process_Feedback_38_0"></a>Chris Invitation Process Feedback 3/8</h2>
+<h3><a id="Bringing_up_the_Invitations_Modal_3"></a>Bringing up the Invitations Modal</h3>
+<ul>
+<li>
+<p>[works] Profile Pic Dropdown &gt; Send Invites link in nav</p>
+</li>
+<li>
+<p>[works] Profile, Manage Invites Page, Invite Members Button</p>
+</li>
+<li>
+<p>[works] Commons Profile Page, Send Invites</p>
+</li>
+<li>
+<p>[works] Site Dashboard Left Nav, Users &gt; Add New</p>
+</li>
+<li>
+<p>[not working] Site Dashboard Users &gt; Click Add New button next to Users</p>
+</li>
+<li>
+<p>[not working] Site Admin bar + New &gt; User</p>
+</li>
+<li>
+<p>Note: Should we change the order of the left nav in Commons Profile so that Send Invites and Manage Invites are next to each other? That nav bar needs some thought overall in terms of order of items.</p>
+</li>
+</ul>
+<h3><a id="Modal_Pages_13"></a>Modal Pages</h3>
+<h4><a id="General_15"></a>General</h4>
+<ul>
+<li>Ampersand in-group or site name displays as html entity &amp; did not check this with other similar characters. Example: BMCC MEA Faculty &amp; Staff</li>
+<li>The modal box is not scrollable. If you’re on a small screen and the bottom of the box is not visible, you can’t scroll down to see it.
+<ul>
+<li>This is addressable through CSS. It may be an opportunity to include some styling for a generally responsive modal box that can also be used in other situations.</li>
+</ul>
+</li>
+<li>[team suggestion] Change all of the titles to start with Send Invites Step X: where x is the step number (Send Invites Step 3: Review and Submit).
+<ul>
+<li>I like the idea, but it will require some reworking of the CSS layout for smaller screens as the longer title plus the description (ie “Select the type of invitation you are sending”) will need multiple lines on smaller screens. What about adding a number for now and then seeing if we have time to address it better later? 1: Membership Select the type of invitation you are sending</li>
+</ul>
+</li>
+<li>Invitations do not show up in notifications.</li>
+<li>Rejecting invitations doesn’t show up in your personal  Accepting group/site membership does show up</li>
+<li>The cursor is I-cursor over the X to close instead of finger.</li>
+</ul>
+<h4><a id="Membership_currently_1st_page_25"></a>Membership (currently 1st page)</h4>
+<ul>
+<li>​[team suggestion] add  ability to increase the size of the boxes. The idea is fine. However making the modal boxes scrollable (general above) would have to happen in order for this to happen. Also this only affects a small number of people who have a lot of groups and want to invite people to multiple groups.</li>
+<li>[team suggestion] Add headings above group/site name and role
+<ul>
+<li>Ideally I would like to test this with people. I understand where this is coming from but I’m not sure if it will be an issue. Perhaps we can wait on this until we decide order and interface for selecting groups and sites?</li>
+<li>If we do this it would add a second line to the box (after Select which site/group to include below) and that would be another reason to rethink the sizing of the boxes.</li>
+</ul>
+</li>
+<li>[team suggestion] Change Site Membership heading. The word “site” may be confused with the Commons. This could be confusing. Here are my suggestions for some alternative titles for the page
+<ul>
+<li>Commons Membership (keep this the same)</li>
+<li>Add Invites to Join Your Groups (instead of Group Membership)</li>
+<li>Add Invites to Join Your Sites (Instead of Site Membership)</li>
+</ul>
+</li>
+</ul>
+<h4><a id="Select_People_currently_2nd_page_37"></a>Select People (currently 2nd page)</h4>
+<ul>
+<li>​[team suggestion]</li>
+<li>Invite by Name: this needs some instructions below. Perhaps
+<ul>
+<li>Type the name or username of an existing Commons member in the box below. If you can’t find them this way you can invite them by email below and it will still work.</li>
+</ul>
+</li>
+<li>When starting the process from a site I was not getting matches for the Invite by Name. It would spin to show it was searching but nothing would appear.</li>
+<li>[team suggestion] Invite by Email: subdomain email addresses were showing as red when should be valid: <a href="mailto:cstein@bmcc.cuny.edu">cstein@bmcc.cuny.edu</a>, <a href="mailto:mgold@gc.cuny.edu">mgold@gc.cuny.edu</a></li>
+<li>Invite by Email: explanation of red text. This may be unclear to some people why an email is red. We may need more text in the instructions that reads something like
+<ul>
+<li>If an email address appears in red no email will be sent to that address. Emails appear red because they are either (a) not properly formatted, or (b) not from one of the allowed domains.</li>
+</ul>
+</li>
+<li>Invite by Email: reformatting to comma separated list. When you separate addresses by lines they are automatically reformatted as comma separated. This is cool but I wonder if it will confuse some. Some thoughts
+<ul>
+<li>Leave it, test after launch to see if it’s confusing</li>
+<li>Just tell people to separate by comma. Then add a sentence that says something like “If you paste or type in a list with addresses on separate lines, it will be reformatted automatically.</li>
+<li>Can we also add converting ; to a comma? Many CUNY people use Outlook and this requires separating emails with semicolon so some (admins especially) may have semicolon separated lists.</li>
+</ul>
+</li>
+</ul>
+<h4><a id="Review__Submit_currently_3rd_page_50"></a>Review &amp; Submit (currently 3rd page)</h4>
+<ul>
+<li>Remove the Edit link from Commons Membership (this currently takes you back to Select People). Instead see next item.</li>
+<li>​Add list of  invitees (people) to this page.
+<ul>
+<li>Title: People Invited</li>
+<li>Also add Edit link next to the title that goes back to Select People</li>
+<li>I can do some mockups of ways to show it.</li>
+<li>With a lot of invitees and groups and sites this will require the modal to scroll.</li>
+</ul>
+</li>
+<li>Right now it’s not clear that when these invites go out people will only be able to accept or reject them en masse. Assuming that this functionality stays we may want to note that somewhere. I haven’t figured out the best wording or placement or if it’s necessary.</li>
+<li>Under Ready to Send? The word email is misspelled.</li>
+<li>[team suggestion] Show people the message that will go out to the invitees.</li>
+</ul>
+<h4><a id="Confirm_currently_4th_page_61"></a>Confirm (currently 4th page)</h4>
+<ul>
+<li>​[team suggestion] Change name to Confirmation. Agreed</li>
+<li>Remove the Back button. This may be confusing and people may resubmit the invites.</li>
+<li>Add a period after Your invitations have been sent</li>
+<li>Change the following text
+<ul>
+<li>From “To view your invitations and manage the process go to your invitations page”</li>
+<li>To “To view your invitations and manage the process click the Manage Your Invites button below. To send more invites click the Send New Invite button below.&quot;</li>
+</ul>
+</li>
+</ul>
+<h4><a id="Claim_Invitation_70"></a>Claim Invitation</h4>
+<ul>
+<li>​Add a link to Claim an Invitation to the sub-menu of My Invites in the admin bar</li>
+</ul>
+<h4><a id="Manage_Invites_Page_73"></a>Manage Invites Page</h4>
+<ul>
+<li>[team suggestion] on Invitations Sent Tab explain the statuses. What does Pending, Accepted, Rejected Mean
+<ul>
+<li>Pending is the only one that seems open to confusion. perhaps this is a v2 item that can be user tested?</li>
+</ul>
+</li>
+<li>Accept/Reject: there is only one choice for all groups and sites. Do we want to keep this as a single invite or break it up? The decision before was to keep it single so you wouldn’t have to click a bunch of times. Is that use case more important or prevalent than people who only want to accept some of the invites?</li>
+</ul>
+<h3><a id="Responsiveness_80"></a>Responsiveness</h3>
+<ul>
+<li>I need some more time on this. Some initial thoughts
+<ul>
+<li>Is there a way to test on phone on dev?</li>
+<li>Bottom list of steps needs to be redone to work on smaller screens</li>
+<li>The modal scrolling needs to work for this to work on smaller screens</li>
+<li>​When the modal appears in the WP Site Dashboard, you can leave out the inline CSS of left: 200px;  for div.caco-modal.
+<ul>
+<li>Instead change z-indez of #caco-modal-overlay to 10000 and this will put it over the WP navigation.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2><a id="NEW_FEATURES_or_LARGER_CHANGES_89"></a>NEW FEATURES or LARGER CHANGES</h2>
+<ul>
+<li>[team suggestion] <strong>Change the first page to be Select People</strong>. If time is short and we want to do something then idea 1 is easiest. Idea 2 feels too complicated. Idea 3 is good, more work. It could also be combined with idea 1.
+<ul>
+<li><strong>Idea 1</strong>: swap the order of Membership and Select People</li>
+<li><strong>Idea 2</strong>: Swap the order only if they are inviting from a group or site</li>
+<li><strong>Idea 3</strong>: keep Membership first but make it simpler where it shows the current group or site that the inviter came from (if applicable) and then has them click something to add more. When they click then they would see the list of groups/sites.</li>
+</ul>
+</li>
+<li>[team suggestion] <strong>Change the way groups and sites are selected</strong>. Instead of the current lists of groups and sites in boxes, just show which ones are selected and then allow them to click a + or something and add more groups/sites.
+<ul>
+<li>This is a valid option and could merge in with idea 3 above. Doing this right will require some more thought about the interface and some JavaScript/CSS to pull it off. Is this a version 1 change or a version 2?</li>
+</ul>
+</li>
+</ul>
+</main>
+
+    </body>
+</html>
+
+
+

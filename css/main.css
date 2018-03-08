@@ -1,4 +1,7 @@
-main{
+@import url('https://fonts.googleapis.com/css?family=Lato:700');
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700,700i');
+
+.main, main{
     width:95%;
     margin: 0 auto;
 }
@@ -10,3 +13,88 @@ a{
 a:visited{
     border-bottom-color: #999;
 }
+
+
+/* TYPOGRAPHY */
+/* Fonts imported at top of CSS file */
+
+
+/* The html and body selectors below set the base font for the entire page */
+html {font-size: 1em;}
+
+body {
+  font-family: 'Gentium Book Basic', serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+
+/*   there are other ways to do this but it's good to remember not to let text run right up to the edge of borders or color changes, images etc.' */
+/*   padding: 1em; */
+}
+
+/* This adds space between paragraphs and list items*/
+/* NOTE: most Navigations use list items so you will need to */
+/* explicity set the margins on those so this rule doesn't */
+/* mess up your navigation styling */
+p, li {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+/* Base Styling for headings  */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: Lato, sans-serif;
+}
+
+/* For each of your headings at minimum set the margin, size, line-height. Adjust font-weight and other properties as needed. */
+
+h1 {
+  font-size: 5.063em;
+  line-height: 1;
+  margin: 0 0 0.5em 0;
+}
+
+h2 {
+  font-size: 3.375em;
+  line-height: 1.2;
+  margin: 1.5em 0 0.5em 0;
+}
+
+h3 {
+  font-size: 2.25em;
+  line-height: 1;
+  margin: 1.5em 0 0.25em 0;
+}
+
+h4 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin: 1.5em 0 0.5em 0;
+}
+
+h5 {
+  font-size: 1em;
+  line-height: 1;
+  margin: 1.5em 0 0.5em 0;
+
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 1em 0 0 0;
+  font-weight: 400; /* normal */
+  text-transform: uppercase;
+}
+
+/* Basic List Style */
+/* IF you use Normalize you won't need this */
+/* ul, ol{
+  margin-left: 2em;
+  list-style-type: inherit;
+}
+ul li, ol li{
+  margin-bottom: 1em;
+}
+ */
