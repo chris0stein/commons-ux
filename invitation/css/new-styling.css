@@ -1,3 +1,95 @@
+/*
+Commons colors (computed)
+blue  65CEF5
+green 72C177
+orange F58D59
+*/
+
+#caco-modal{
+/*    font-size: 1.2em;*/
+}
+
+#caco-modal:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+button, .modal-nav-button{
+    background-color: #F58D59;
+    background: #65CEf5;
+
+/*    remove default stuff*/
+        background: #65CEF5;
+
+}
+button a, button a:visited, .modal-nav-button a{
+    text-decoration: none;
+}
+
+/* Top header */
+.caco-modal-header {
+    background-color: #72C177;
+    font-size: 1.5rem;
+    padding: 14px 20px 10px;
+    padding: 1em;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/*Bottom step indicators*/
+
+/*here is what is tehre now*/
+/*
+.nav-indicator {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 5%;
+    width: 90%;
+}
+.nav-indicator li {
+    border: 1px solid #666;
+    border-right: none;
+    display: table-cell;
+    float: left;
+    list-style-type: none;
+    text-align: center;
+    padding: 8px;
+    width: 33%;
+}
+.nav-indicator li.currentpanel {
+    background-color: #72C177;
+}
+*/
+
+.nav-indicator{
+}
+.nav-indicator li{
+    border-right: 1px solid #666;
+    float: none;
+    display: block;
+    width: auto;
+}
+.nav-indicator li.currentpanel {
+    background-color: #72C177;
+}
+
+/*Make the three steps in a line at the breakpoint*/
+@media screen and (min-width:700px){
+   .nav-indicator{
+        display: flex;
+        justify-content: space-between
+    }
+    .nav-indicator li{
+        border-right: 1px solid #666;
+        flex-basis: auto;
+        flex-grow: 1;
+    }
+}
+
 .scrollbox {
     height: 200px;
     border: 1px solid #757575;
@@ -49,27 +141,54 @@
 .confirm-check img{
     width: 20%;
 }
-
+.confirm-actions{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
 .confirm-action{
     box-sizing: border-box;
+/*
     width: 45%;
     float: left;
     margin: 0 2.5%;
+*/
 
     padding: 2em;
     font-size: 1.2em;
 
+
     display: flex;
+    flex-flow: column nowrap;
+/*
     flex-wrap: wrap;
     flex-direction: column;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     align-content: flex-end;
+*/
+}
+
+@media screen and (min-width:700px){
+/*    break action buttons into two columns*/
+    .confirm-action{
+        flex-basis: 50%;
+    }
+
+    .confirm-action:first-child{
+        border-right: 2px solid #fff;
+    }
+    .confirm-action:nth-child(2){
+        border-left: 2px solid #fff;
+    }
 }
 
 .confirm-action button{
-/*    align-self:baseline;*/
+
+    margin-top: auto;/*    this keeps the button on the bottom */
+    padding: .5em;
+    font-size: 1em;
 }
 
 /*
