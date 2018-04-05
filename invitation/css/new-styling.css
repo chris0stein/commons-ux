@@ -1,0 +1,79 @@
+.scrollbox {
+    height: 200px;
+    border: 1px solid #757575;
+    overflow: scroll;
+}
+
+.scrollbox ul {
+    margin: 0;
+    padding: 0;
+}
+
+.scrollbox li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: normal;
+    font-size: .65rem;
+    color: #757575;
+    padding:5px 20px;
+}
+
+.scrollbox li:nth-of-type(even){
+    background-color: #eee;
+}
+.confirm{
+        background-color: #eee;
+
+}
+.confirm:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.confirm-message{
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 2em;
+    background-color: #fff;
+}
+.confirm-message h2{
+    font-size: 2em;
+}
+
+.confirm-check{
+    color: blue; /* change to commons blue */
+    font-size: 9em;
+
+}
+.confirm-check img{
+    width: 20%;
+}
+
+.confirm-action{
+    box-sizing: border-box;
+    width: 45%;
+    float: left;
+    margin: 0 2.5%;
+
+    padding: 2em;
+    font-size: 1.2em;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-end;
+}
+
+.confirm-action button{
+/*    align-self:baseline;*/
+}
+
+/*
+.confirm-action button{
+    text-align: center;
+    margin: 0 auto;
+}*/
