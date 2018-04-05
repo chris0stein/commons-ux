@@ -1,0 +1,273 @@
+.noscroll {
+	overflow: hidden;
+}
+
+#caco-modal-overlay {
+	background-color: rgba( 0,0,0,0.5 );
+	display: none;
+	position: fixed;
+	overflow-y: auto;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1500; /* Over the top of the CAC header */
+}
+
+[aria-hidden="true"] { display: none; }
+[aria-hidden="false"] { display: block; }
+
+#caco-modal-overlay.caco-modal-visible,
+.caco-modal-visible #caco-modal {
+	display: block;
+}
+
+#caco-modal {
+	position: relative;
+	display: none;
+	left: 10%;
+	top: 10%;
+	width: 80%;
+	min-height: calc( 80% - 150px );
+	background: #fff;
+	padding-bottom: 150px;
+	z-index: 3;
+}
+
+#caco-modal .screen-reader-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.caco-modal-header {
+	background-color: #ccc;
+	font-size: 1.5rem;
+	padding: 14px 20px 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.modal-header-description {
+	font-size: .9rem;
+	margin-left: 30px;
+}
+
+.modal-close {
+	cursor: pointer;
+	right: 20px;
+	position: absolute;
+	top: 14px;
+}
+
+.caco-modal-content {
+	padding: 5px 20px;
+}
+
+.caco-modal-content h2 {
+	margin: 10px 0;
+}
+
+.caco-modal-content ol {
+	list-style: decimal;
+}
+
+.caco-modal-content ol li {
+	margin-bottom: .5rem;
+	margin-left: 15px;
+}
+
+.panel-subsection {
+	margin-bottom: 2rem;
+}
+
+.caco-modal-nav {
+	bottom: 0;
+	position: absolute;
+	height: 150px;
+	padding: 0 5%;
+	width: 90%;
+}
+
+.nav-buttons {
+	height: 60px;
+}
+
+.modal-nav-button {
+	background-color: #eee;
+	border: 1px solid #666;
+	color: #000;
+	font-size: 1.2rem;
+	padding: 5px 10px;
+	position: absolute;
+	top: 0;
+}
+
+.modal-nav-button:disabled {
+	border-color: graytext;
+	color: graytext;
+}
+
+.modal-nav-button-left {
+	left: 20px;
+}
+
+.modal-nav-button-right {
+	right: 20px;
+}
+
+.nav-indicator {
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0 5%;
+	width: 90%;
+}
+
+.nav-indicator li {
+	border: 1px solid #666;
+	border-right: none;
+	display: table-cell;
+	float: left;
+	list-style-type: none;
+	text-align: center;
+	padding: 8px;
+	width: 22%;
+}
+
+.nav-indicator li.currentpanel {
+	background-color: #ccc;
+}
+
+.nav-indicator li:last-child {
+	border-right: 1px solid #666;
+}
+
+.membership-item-selector {
+	border: 1px solid #666;
+}
+
+.membership-selector-gloss {
+	background: #ccc;
+	font-size: .9rem;
+	padding: 5px 20px;
+}
+
+.scrollbox {
+	height: 80px;
+	overflow-y: scroll;
+	overflow-x: auto;
+	padding: 0 20px;
+	resize: vertical;
+}
+
+.membership-items ul li {
+	margin-top: .5rem;
+	list-style-type: none;
+	position: relative;
+}
+
+.membership-items ul li > label {
+	display: inline-block;
+	width: 40%;
+}
+
+.membership-role-selector {
+	display: inline-block;
+	width: 25%;
+}
+
+.panel-subsection-invite-by-name {
+	margin-top: 30px;
+}
+
+.autocomplete-wrapper input {
+	width: calc( 100% - 20px );
+}
+
+body.bp-user:not( .profile-edit ) .autocomplete-wrapper input[type="text"] {
+	padding: .5rem 10px;
+}
+
+.ajax-is-loading .autocomplete-wrapper input {
+	background-image: url( '../img/ajax-loader.gif' );
+	background-position: right 5px;
+	background-repeat: no-repeat;
+}
+
+.invited-by-name-empty {
+	display: none;
+}
+
+.invited-by-name {
+	border: 1px solid #666;
+	margin-top: 5px;
+	padding: 5px 5px;
+}
+
+.invite-by-name-items li {
+	background: #ccc;
+	border-radius: 10px;
+	display: inline-block;
+	margin-right: 10px;
+	padding: 5px 50px 5px 10px;
+	position: relative;
+}
+
+button.invited-user-remove {
+	background: inherit;
+	border-left: 1px solid #666;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	color: #000;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.invite-by-email-contenteditable {
+	border: 1px solid #666;
+	margin-top: 5px;
+	min-height: 4rem;
+	padding: 5px;
+}
+
+.invalid-email,
+.invalid-email-warning {
+	color: #f00;
+}
+
+.review-edit-link {
+	font-size: .9rem;
+	margin-left: 10px;
+}
+
+.membership-summary {
+	border: 1px solid #666;
+}
+
+.membership-summary ul {
+	list-style-type: none;
+	margin-top: 10px;
+}
+
+.membership-summary-item-name {
+	float: left;
+	width: 250px;
+}
+
+.membership-summary-item-role {
+	margin-left: 280px;
+}
+
+textarea.custom-message {
+	min-height: 3rem;
+	padding: 1rem 20px;
+	width: calc( 100% - 40px );
+}
