@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)http://michaelbransonsmith.net/cac-modal/commons-invite-review.html -->
+<html lang="en" class="gr__michaelbransonsmith_net"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add a Message and Review Your Invitations</title>
+    <link rel="stylesheet" href="invite.css" type="text/css">
+<style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; touch-action-delay: none; }
+body /shadow-deep/ [touch-action="none"]{ -ms-touch-action: none; touch-action: none; touch-action-delay: none; }
+[touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto; touch-action-delay: none; }
+body /shadow-deep/ [touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto; touch-action-delay: none; }
+[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; touch-action-delay: none; }
+body /shadow-deep/ [touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; touch-action-delay: none; }
+[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; touch-action-delay: none; }
+body /shadow-deep/ [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; touch-action-delay: none; }
+[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; touch-action-delay: none; }
+body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; touch-action-delay: none; }
+</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><link type="text/css" rel="stylesheet" href="chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content.css"></head>
+
+<body data-gr-c-s-loaded="true">
+    <div class="wrapper">
+        <section class="heading">
+            <h1 class="title">Send Invitations</h1>
+            <p class="description">Before you send, review invites and add a message.</p>
+        </section>
+        <hr>
+        <section class="form-area">
+            <nav class="form-nav">
+                <ul class="tabs">
+                    <li class="tabs-tab">People</li>
+                    <li class="tabs-tab">Groups</li>
+                    <li class="tabs-tab">Sites</li>
+                    <li class="tabs-tab tab-selected">Add a Message</li>
+                </ul>
+            </nav>
+
+            <form id="review-invitation" action="http://michaelbransonsmith.net/cac-modal/commons-invite-confirmation.html">
+                <div class="form-part review-people not-visible">
+                    <label for="review-people">Here is the list of people you're inviting.</label>
+                    <div class="scrollbox" id="review-people">
+                        <ul>
+                            <li>
+                                <div class="invite-by-name-item">Firstname Lastname</div>
+                            </li>
+                            <li>
+                                <div class="invite-by-name-item">Firstname Lastname</div>
+                            </li>
+                            <li>
+                                <div class="invite-by-name-item">Firstname Lastname</div>
+                            </li>
+                            <li>
+                                <div class="invite-by-name-item">Firstname Lastname</div>
+                            </li>
+                            <li>
+                                <div class="invite-by-email-item">foo@cuny.edu</div>
+                            </li>
+                            <li>
+                                <div class="invite-by-email-item">foo@cuny.edu</div>
+                            </li>
+                            <li>
+                                <div class="invite-by-email-item">foo@cuny.edu</div>
+                            </li>
+                            <li>
+                                <div class="invite-by-email-item">foo@cuny.edu</div>
+                            </li>
+                            <li>
+                                <div class="invite-by-email-item">foo@cuny.edu</div>
+                            </li>
+                            <li>
+                                <div class="invite-by-email-item">foo@cuny.edu</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-part review-groups not-visible">
+                    <label for="review-groups">People will be invited to these groups.</label>
+                    <div class="scrollbox" id="review-groups">
+                        <ul>
+                            <li>
+                                <div class="membership-summary-item-name">Amazing Testing Committee</div>
+                                <div class="membership-summary-item-role">Role: Member</div>
+                            </li>
+                            <li>
+                                <div class="membership-summary-item-name">CBox Theme workspace</div>
+                                <div class="membership-summary-item-role">Role: Moderator</div>
+                            </li>
+                            <li>
+                                <div class="membership-summary-item-name">CUNY Academic Commons Subcommittee</div>
+                                <div class="membership-summary-item-role">Role: Member</div>
+                            </li>
+                            <li>
+                                <div class="membership-summary-item-name">CUNY Academic Commons Team</div>
+                                <div class="membership-summary-item-role">Role: Member</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-part review-sites not-visible">
+                    <label for="review-sites">People will be invited to these sites.</label>
+                    <div class="scrollbox" id="review-sites">
+                        <ul>
+                            <li>
+                                <div class="membership-summary-item-name">CUNY Academic Commons News</div>
+                                <div class="membership-summary-item-role">Role: Editor</div>
+                            </li>
+                            <li>
+                                <div class="membership-summary-item-name">CUNY.is/LIVE</div>
+                                <div class="membership-summary-item-role">Role: Author</div>
+                            </li>
+                            <li>
+                                <div class="membership-summary-item-name">Ground Control</div>
+                                <div class="membership-summary-item-role">Role: Administrator</div>
+                            </li>
+                            <li>
+                                <div class="membership-summary-item-name">Hybrid Initiative</div>
+                                <div class="membership-summary-item-role">Role: Author</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-part add-message">
+                    <label for="add-message">Include a message with all the invitations you are sending.</label>
+                    <textarea class="scrollbox" id="add-message">                    </textarea>
+                </div>
+                <input type="submit" value="Send Invitations">
+            </form>
+        </section>
+        <section class="modal-nav">
+                <a href="commons-invite-people.html"></a>
+                <a href="commons-invite-membership.html"></a>
+                <a href="commons-invite-review.html" class="selected-page"></a>
+        </section>
+    </div>
+    <script type="text/javascript" src="invite.js"></script>
+
+
+</body></html>
