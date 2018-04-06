@@ -265,6 +265,46 @@ form {
 }
 
 
+
+/*
+=================
+Review page
+=================
+*/
+.review-edit-link{
+    font-size:.85em;
+    margin-left:3em;
+}
+.review .panel-subsection{
+    display: flex;
+    flex-flow: row nowrap;
+/*    width: 100%;*/
+    box-sizing: border-box;
+}
+
+@media screen and (min-width:700px){
+/*    break action buttons into two columns*/
+    .review .people, .review .membership{
+        box-sizing: border-box;
+        flex-basis: 50%;
+    }
+
+    .review .people{
+        padding-right: 10px;
+    }
+    .review .membership{
+        padding-left: 10px;
+    }
+
+    .confirm-action:first-child{
+        border-right: 2px solid #fff;
+    }
+    .confirm-action:nth-child(2){
+        border-left: 2px solid #fff;
+    }
+}
+
+
 /*
 =================
 Confirmation page
@@ -340,3 +380,4 @@ Confirmation page
     text-align: center;
     margin: 0 auto;
 }*/
+

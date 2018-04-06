@@ -21,22 +21,258 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style(1).css">
     <link rel="stylesheet" href="css/validationEngine.jquery.css">
+
+    <link rel="stylesheet" href="css/new-styling.css">
+    <link rel="stylesheet" href="css/responsive-table.css">
 </head>
 <body class="bbp-user-page single singular bbpress bp-user my-account manage-invites received buddypress bp-legacy page-template-default page page-id-0 page-parent logged-in admin-bar js cacap short-header inline-comments customize-support noscroll" data-gr-c-s-loaded="true">
-    <div id="caco-modal-overlay" aria-hidden="false" class="caco-modal-visible"><div id="caco-modal"><div class="caco-modal-header">
-	3. Review &amp; Submit
+    <div id="caco-modal-overlay" aria-hidden="false" class="caco-modal-visible">
+    <div id="caco-modal" class="review">
+        <div class="caco-modal-header">
+            3. Review &amp; Submit
 
-	<span class="modal-header-description">
+            <span class="modal-header-description">
 
-	</span> <div class="modal-close">
-		X
-	</div></div> <div class="caco-modal-content"><div class="panel-subsection"><h2>Membership</h2> <h3>
-				Commons Membership
-				<a href="" class="review-edit-link">Edit</a></h3> <p>Every invite is automatically sent a Commons membership.</p> <h3>
-				Groups
-				<a href="" class="review-edit-link">Edit</a></h3> <p>You are inviting people to the following groups:</p> <div class="membership-summary scrollbox"><ul><li><div class="membership-summary-item-name">Another Chris hidden</div> <div class="membership-summary-item-role">Role: Member</div></li></ul></div> <h3>
-				Sites
-				<a href="" class="review-edit-link">Edit</a></h3> <p>You are inviting people to the following sites:</p> <div class="membership-summary scrollbox"><ul><li><div class="membership-summary-item-name">Another Chris hidden</div> <div class="membership-summary-item-role">Role: Author</div></li></ul></div></div> <div class="panel-subsection"><h2>Add a Message</h2> <textarea placeholder="Add a custom message here! Invitees automatically receive instructions on how to join the Commons, Groups, or Sites." class="custom-message"></textarea></div> <div class="panel-subsection panel-subsection-ready-to-send"><h2>Ready to Send?</h2> <p>Clicking 'submit' will send an email to all invitees and add notifications on the Commons for any existing members.</p></div></div> <div class="caco-modal-nav"><div class="nav-buttons"><button class="modal-nav-button modal-nav-button-left">
+            </span>
+            <div class="modal-close">
+                X
+            </div>
+        </div>
+        <div class="caco-modal-content">
+            <div class="review-info">
+                        <p>Review all of you information on this page. </p>
+                    </div>
+            <div class="panel-subsection info">
+
+                <div class="people">
+<!--                    <h3>Review</h3>-->
+
+                    <h3>People <a href="" class="review-edit-link">Edit Invitees</a></h3>
+                   <p>You are sending invites to the following people:</p>
+                                    <div class="wrapper">
+                                           <div class="table">
+
+                                                <div class="row header">
+                                                  <div class="cell">
+                                                    People Being Invited
+                                                  </div>
+                                                </div>
+
+                                                <div class="row">
+                                                  <div class="cell" data-title="Person">
+                                                    Chris Stein
+                                                  </div>
+                                                </div>
+                                                <div class="row">
+                                                  <div class="cell" data-title="Person">
+                                                    Matt Gold
+                                                  </div>
+                                                </div>
+                                                <div class="row">
+                                                  <div class="cell" data-title="Person">
+                                                    Erik Trainer
+                                                  </div>
+                                                </div>
+                                                <div class="row">
+                                                  <div class="cell" data-title="Person">
+                                                    Chris Stein
+                                                  </div>
+                                                </div>
+
+
+
+                                            </div>
+                                       </div>
+                </div>
+                <div class="membership">
+                     <div class="groups">
+                   <h3>Groups <a href="" class="review-edit-link">Edit Groups</a></h3>
+                   <p>You are inviting people to the following groups:</p>
+                   <div class="wrapper">
+                       <div class="table">
+
+                            <div class="row header">
+                              <div class="cell">
+                                Group Name
+                              </div>
+                              <div class="cell">
+                                Group Role
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="cell" data-title="Group">
+                                Another Chris Hidden
+                              </div>
+                              <div class="cell" data-title="Role">
+                                member
+                              </div>
+                            </div>
+
+                           <div class="row">
+                              <div class="cell" data-title="Group">
+                                CUNY Academic Commons Team
+                              </div>
+                              <div class="cell" data-title="Role">
+                                member
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="cell" data-title="Group">
+                                A very long group name that goes on and on and on.
+                              </div>
+                              <div class="cell" data-title="Role">
+                                member
+                              </div>
+                            </div>
+                          </div>
+                   </div>
+
+               </div>
+
+                    <div class="sites">
+                         <h3>Sites 		<a href="" class="review-edit-link">Edit Sites</a></h3>
+                        <p>You are inviting people to the following sites:</p>
+                       <div class="wrapper">
+                           <div class="table">
+
+                                <div class="row header">
+                                  <div class="cell">
+                                    Site Name
+                                  </div>
+                                  <div class="cell">
+                                    Site Role
+                                  </div>
+                                </div>
+
+                                <div class="row">
+                                  <div class="cell" data-title="Site">
+                                    Another Chris Hidden
+                                  </div>
+                                  <div class="cell" data-title="Role">
+                                    member
+                                  </div>
+                                </div>
+
+                               <div class="row">
+                                  <div class="cell" data-title="Site">
+                                    CUNY Academic Commons Team
+                                  </div>
+                                  <div class="cell" data-title="Role">
+                                    member
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="cell" data-title="Site">
+                                    A very long site name that goes on and on and on and on.
+                                  </div>
+                                  <div class="cell" data-title="Role">
+                                    member
+                                  </div>
+                                </div>
+                              </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-subsection membership">
+<!--
+               <div class="groups">
+                   <h3>Groups <a href="" class="review-edit-link">Edit Groups</a></h3>
+                   <p>You are inviting people to the following groups:</p>
+                   <div class="wrapper">
+                       <div class="table">
+
+                            <div class="row header">
+                              <div class="cell">
+                                Group Name
+                              </div>
+                              <div class="cell">
+                                Group Role
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="cell" data-title="Group">
+                                Another Chris Hidden
+                              </div>
+                              <div class="cell" data-title="Role">
+                                member
+                              </div>
+                            </div>
+
+                           <div class="row">
+                              <div class="cell" data-title="Group">
+                                CUNY Academic Commons Team
+                              </div>
+                              <div class="cell" data-title="Role">
+                                member
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="cell" data-title="Group">
+                                A very long group name that goes on and on and on.
+                              </div>
+                              <div class="cell" data-title="Role">
+                                member
+                              </div>
+                            </div>
+                          </div>
+                   </div>
+
+               </div>
+-->
+
+<!--
+               <div class="sites">
+                     <h3>Sites 		<a href="" class="review-edit-link">Edit Sites</a></h3>
+                    <p>You are inviting people to the following sites:</p>
+                   <div class="wrapper">
+                       <div class="table">
+
+                            <div class="row header">
+                              <div class="cell">
+                                Site Name
+                              </div>
+                              <div class="cell">
+                                Site Role
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="cell" data-title="Site">
+                                Another Chris Hidden
+                              </div>
+                              <div class="cell" data-title="Role">
+                                member
+                              </div>
+                            </div>
+
+                           <div class="row">
+                              <div class="cell" data-title="Site">
+                                CUNY Academic Commons Team
+                              </div>
+                              <div class="cell" data-title="Role">
+                                member
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="cell" data-title="Site">
+                                A very long site name that goes on and on and on and on.
+                              </div>
+                              <div class="cell" data-title="Role">
+                                member
+                              </div>
+                            </div>
+                          </div>
+                   </div>
+                </div>
+-->
+            </div>
+
+
+				<div class="panel-subsection"><h2>Add a Message</h2> <textarea placeholder="Add a custom message here! Invitees automatically receive instructions on how to join the Commons, Groups, or Sites." class="custom-message"></textarea></div> <div class="panel-subsection panel-subsection-ready-to-send"><h2>Ready to Send?</h2> <p>Clicking 'submit' will send an email to all invitees and add notifications on the Commons for any existing members.</p></div></div> <div class="caco-modal-nav"><div class="nav-buttons"><button class="modal-nav-button modal-nav-button-left">
 			<a href="membership.html">Back</a>
 		</button> <!---->
 <!--
@@ -48,14 +284,23 @@
 			    <a href="confirmation.html">Submit</a>
 		    </button>
 
-		</div> <ul class="nav-indicator"><li class="">
-			1. Select People
-		</li><li class="">
-			2. Membership
-		</li><li class="currentpanel">
-			3. Review &amp; Submit
-		</li><li class="">
-			4. Confirmation
-		</li></ul></div></div></div>
+		</div>
+        <ul class="nav-indicator">
+            <li class="">
+                1. Select People
+            </li>
+            <li class="">
+                2. Membership
+            </li>
+            <li class="currentpanel">
+                3. Review &amp; Submit
+            </li>
+<!--
+            <li class="">
+                4. Confirmation
+            </li>
+-->
+        </ul>
+</div></div></div>
 </body>
 </html>
