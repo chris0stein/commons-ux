@@ -36,6 +36,11 @@ button a, button a:visited, .modal-nav-button a{
     padding: 1em;
     position: relative;
     overflow: hidden;
+    color: #333;
+    font-weight: 700;
+}
+.modal-close{
+    top: 1em;
 }
 
 
@@ -114,8 +119,160 @@ button a, button a:visited, .modal-nav-button a{
 .scrollbox li:nth-of-type(even){
     background-color: #eee;
 }
+
+/*
+=================
+People page
+=================
+*/
+
+.panel{
+    margin-top: 2em;
+}
+
+.panel .panel-subsection{
+/*
+    background-color: #eee;
+    padding: 15px;
+*/
+    padding-bottom: 2rem;
+/*    margin-bottom: 1rem;*/
+}
+.panel .panel-subsection:first-child{
+/*    padding-bottom: 1em;*/
+    border-bottom: 1px solid #ccc;
+}
+
+.panel-subsection-invite-by-name {
+    margin-top: 0; /*removing existing */
+}
+
+.panel-subsection input, .panel-subsection .invite-by-email-contenteditable{
+        background-color: #fff;
+    }
+
+@media screen and (min-width:700px){
+    .panel{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .panel .panel-subsection{
+        box-sizing: border-box;
+        width: 50%;
+         background-color: #eee;
+        padding: 15px;
+    }
+    .panel .panel-subsection:first-child{
+        border-right: 2px solid #fff;
+        border-bottom: none;
+    }
+    .panel .panel-subsection:nth-child(2){
+        border-left: 2px solid #fff;
+    }
+
+    .panel .panel-subsection input, .panel .panel-subsection .invite-by-email-contenteditable{
+        background-color: #fff;
+    }
+}
+
+
+
+/*
+=================
+Membership page
+=================
+*/
+.membership-items{
+    margin-top: auto;
+}
+
+.membership-item-selector{
+    display: block;
+}
+
+.membership-selector-gloss{
+    display: flex;
+/*    width: auto;*/
+/*    width: 100%;*/
+}
+.membership-selector-gloss div{
+/*    display: table-cell;*/
+}
+.membership-selector-gloss div:first-child{
+    width: 70%;
+}
+.membership-selector-gloss div:nth-child(2){
+    width: 30%;
+    text-align: right;
+}
+
+
+/*
+---------------------
+Michael's tab styling
+---------------------
+*/
+ul.tabs {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+
+    background-color: #eaeaea;
+    padding: 25px 10px 0px 10px;
+}
+
+.tabs-tab {
+/*    margin-bottom: 20px;*/
+/*    margin-right: 15px;*/
+/*    margin: 0 25px 0 0;*/
+    color: #65CEF5;
+    padding: 5px 25px;
+    font-weight: 700;
+    box-sizing: border-box;
+    border-bottom: 3px solid #eaeaea;
+}
+
+.tabs-tab:hover{
+    border-bottom: 3px solid #65CEF5;
+    cursor: pointer;
+}
+
+.tab-selected {
+/*    font-weight: bold;*/
+/*    border-bottom: 3px solid #2db4db;*/
+/*    color: #2db4db;*/
+    color: #555;
+    background-color: #fff;
+    border-bottom: 3px solid #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+}
+
+.form-part {
+    display: flex;
+    flex-direction: column;
+}
+
+.not-visible {
+    display: none;
+}
+
+
+/*
+=================
+Confirmation page
+=================
+*/
+
 .confirm{
-        background-color: #eee;
+    background-color: #eee;
 
 }
 .confirm:after {
@@ -146,28 +303,15 @@ button a, button a:visited, .modal-nav-button a{
     flex-flow: row wrap;
     justify-content: flex-start;
 }
+
 .confirm-action{
     box-sizing: border-box;
-/*
-    width: 45%;
-    float: left;
-    margin: 0 2.5%;
-*/
 
     padding: 2em;
     font-size: 1.2em;
 
-
     display: flex;
     flex-flow: column nowrap;
-/*
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: flex-end;
-*/
 }
 
 @media screen and (min-width:700px){

@@ -23,12 +23,16 @@
     <link rel="stylesheet" href="css/validationEngine.jquery.css">
 
     <link rel="stylesheet" href="css/new-styling.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate.min.js"></script>
+
 </head>
 
 <body class="bbp-user-page single singular bbpress bp-user my-account manage-invites received buddypress bp-legacy page-template-default page page-id-0 page-parent logged-in admin-bar js cacap short-header inline-comments customize-support noscroll" data-gr-c-s-loaded="true">
 
     <div id="caco-modal-overlay" aria-hidden="false" class="caco-modal-visible">
-        <div id="caco-modal">
+        <div id="caco-modal" class="membership">
             <div class="caco-modal-header">
                 2. Membership
 
@@ -44,1588 +48,267 @@
                     <h2>Commons Membership</h2>
                     <p>All invitees will be asked to join the CUNY Academic Commons if they aren't already a member.</p>
                 </div>
-                <div class="panel-subsection panel-subsection-group-membership">
-                    <h2>Add Invites to Join Your Groups</h2>
-                    <div class="membership-selector">
-                        <p>Groups only appear in this list if you have permission to invite members to them.</p>
-                        <div class="membership-item-selector">
-                            <div class="membership-selector-gloss">
-                                Select which group to include below.
-                            </div>
-                            <div class="membership-items scrollbox">
+                <section class="form-area">
+                    <nav class="form-nav">
+                        <ul class="tabs">
+                            <li class="tabs-tab tab-selected">Invite to Groups</li>
+                            <li class="tabs-tab">Invite to Sites</li>
+                        </ul>
+                    </nav>
+
+                    <form id="choose-memberships" action="#">
+                        <div class="form-part join-groups">
+                           <p>Groups only appear in this list if you have permission to invite members to them.</p>
+<!--                            <label for="join-groups">If you're allowed to send an invitation for a group, you will see it in this list.</label>-->
+
+                            <div class="scrollbox" id="join-groups">
                                 <ul>
-                                    <li><input type="checkbox" id="item-group-274" name="item-group" value="274"> <label for="item-group-274">
-							Academic Technology Research and Development Group
-						</label>
+                                    <li>
+                                        <div class="item-group"><input type="checkbox" id="item-group-1220" name="item-group" value="1220"> <label for="item-group-1220">
+                                    myTestGroup
+                                </label></div>
+                                        <div class="membership-role-selector"><label for="role-group-1220" class="screen-reader-only">
+                Select a role
+            </label> <select id="role-group-1220"><option value="">Assign a role</option> <option value="member">
+                    Member
+                </option><option value="mod">
+                    Moderator
+                </option><option value="admin">
+                    Administrator
+                </option></select></div>
+                                    </li>
+                                    <li>
+                                        <div class="item-group"><input type="checkbox" id="item-group-274" name="item-group" value="274"> <label for="item-group-274">
+                                    Academic Technology Research and Development Group
+                                                </label></div>
                                         <div class="membership-role-selector"><label for="role-group-274" class="screen-reader-only">
- Select a role
-</label> <select id="role-group-274"><option value="">Assign a role</option> <option value="member">
-                                                Member
-                                            </option><option value="mod">
-                                                Moderator
-                                            </option><option value="admin">
-                                                Administrator
-                                            </option></select>
-                                   </div>
+                Select a role
+            </label> <select id="role-group-274"><option value="">Assign a role</option> <option value="member">
+                    Member
+                </option><option value="mod">
+                    Moderator
+                </option><option value="admin">
+                    Administrator
+                </option></select></div>
                                     </li>
-                                    <li><input type="checkbox" id="item-group-4" name="item-group" value="4"> <label for="item-group-4">
-							Adjuncts!
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-4" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-4"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
+                                    <li>
+                                        <div class="item-group"><input type="checkbox" id="item-group-1149" name="item-group" value="1149"> <label for="item-group-1149">
+                                    Amazing Testing Committee
+                                                </label></div>
+                                        <div class="membership-role-selector"><label for="role-group-1149" class="screen-reader-only">
+                Select a role
+            </label> <select id="role-group-1149"><option value="">Assign a role</option> <option value="member">
+                    Member
+                </option><option value="mod">
+                    Moderator
+                </option><option value="admin">
+                    Administrator
+                </option></select></div>
                                     </li>
-                                    <li><input type="checkbox" id="item-group-857" name="item-group" value="857"> <label for="item-group-857">
-							Announcements
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-857" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-857"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
+                                    <li>
+                                        <div class="item-group"><input type="checkbox" id="item-group-165" name="item-group" value="165"> <label for="item-group-165">
+                                    CAT ePortfolio Subcommittee
+                                                </label></div>
+                                        <div class="membership-role-selector"><label for="role-group-165" class="screen-reader-only">
+                Select a role
+            </label> <select id="role-group-165"><option value="">Assign a role</option> <option value="member">
+                    Member
+                </option><option value="mod">
+                    Moderator
+                </option><option value="admin">
+                    Administrator
+                </option></select></div>
                                     </li>
-                                    <li><input type="checkbox" id="item-group-209" name="item-group" value="209"> <label for="item-group-209">
-							Another Chris hidden
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-209" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-209"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-329" name="item-group" value="329"> <label for="item-group-329">
-							BMCC Assessment Committee
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-329" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-329"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-988" name="item-group" value="988"> <label for="item-group-988">
-							BMCC Game Design Major Planning Group
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-988" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-988"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-677" name="item-group" value="677"> <label for="item-group-677">
-							BMCC MEA Faculty &amp; Staff
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-677" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-677"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-263" name="item-group" value="263"> <label for="item-group-263">
-							BMCC MMP 100
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-263" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-263"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-499" name="item-group" value="499"> <label for="item-group-499">
-							BMCC Middle States Periodic Review Report Technology Committee
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-499" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-499"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-998" name="item-group" value="998"> <label for="item-group-998">
-							BMCC NT Advisory Committee
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-998" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-998"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-216" name="item-group" value="216"> <label for="item-group-216">
-							CAT R&amp;D Subcommittee
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-216" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-216"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-419" name="item-group" value="419"> <label for="item-group-419">
-							CAT-R&amp;D CourseSites Project
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-419" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-419"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-572" name="item-group" value="572"> <label for="item-group-572">
-							CBox Theme workspace
-						</label>
+                                    <li>
+                                        <div class="item-group"><input type="checkbox" id="item-group-572" name="item-group" value="572"> <label for="item-group-572">
+                                    CBox Theme workspace
+                                                </label></div>
                                         <div class="membership-role-selector"><label for="role-group-572" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-572"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
+                Select a role
+            </label> <select id="role-group-572"><option value="">Assign a role</option> <option value="member">
+                    Member
+                </option><option value="mod">
+                    Moderator
+                </option><option value="admin">
+                    Administrator
+                </option></select></div>
                                     </li>
-                                    <li><input type="checkbox" id="item-group-603" name="item-group" value="603"> <label for="item-group-603">
-							CBox theme discussion - CAC only
-						</label>
+                                    <li>
+                                        <div class="item-group"><input type="checkbox" id="item-group-603" name="item-group" value="603"> <label for="item-group-603">
+                                    CBox theme discussion - CAC only
+                                                </label></div>
                                         <div class="membership-role-selector"><label for="role-group-603" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-603"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
+                Select a role
+            </label> <select id="role-group-603"><option value="">Assign a role</option> <option value="member">
+                    Member
+                </option><option value="mod">
+                    Moderator
+                </option><option value="admin">
+                    Administrator
+                </option></select></div>
                                     </li>
-                                    <li><input type="checkbox" id="item-group-113" name="item-group" value="113"> <label for="item-group-113">
-							CUNY Academic Commons Coding Team
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-113" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-113"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-24" name="item-group" value="24"> <label for="item-group-24">
-							CUNY Academic Commons Subcommittee
-						</label>
+                                    <li>
+                                        <div class="item-group"><input type="checkbox" id="item-group-24" name="item-group" value="24"> <label for="item-group-24">
+                                    CUNY Academic Commons Subcommittee
+                                                </label></div>
                                         <div class="membership-role-selector"><label for="role-group-24" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-24"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
+                Select a role
+            </label> <select id="role-group-24"><option value="">Assign a role</option> <option value="member">
+                    Member
+                </option><option value="mod">
+                    Moderator
+                </option><option value="admin">
+                    Administrator
+                </option></select></div>
                                     </li>
-                                    <li><input type="checkbox" id="item-group-465" name="item-group" value="465"> <label for="item-group-465">
-							CUNY Academic Commons Team
-						</label>
+                                    <li>
+                                        <div class="item-group"><input type="checkbox" id="item-group-465" name="item-group" value="465"> <label for="item-group-465">
+                                    CUNY Academic Commons Team
+                                                </label></div>
                                         <div class="membership-role-selector"><label for="role-group-465" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-465"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-972" name="item-group" value="972"> <label for="item-group-972">
-							CUNY Central Server: A Discussion...
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-972" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-972"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-129" name="item-group" value="129"> <label for="item-group-129">
-							CUNY Committee on Academic Technology
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-129" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-129"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-1015" name="item-group" value="1015"> <label for="item-group-1015">
-							CUNY Commons Redesign 2015
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-1015" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-1015"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-498" name="item-group" value="498"> <label for="item-group-498">
-							CUNY Eportfolio Symposium
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-498" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-498"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-42" name="item-group" value="42"> <label for="item-group-42">
-							CUNY GC ITP Program
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-42" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-42"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-20" name="item-group" value="20"> <label for="item-group-20">
-							CUNY Games Network
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-20" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-20"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-258" name="item-group" value="258"> <label for="item-group-258">
-							CUNY ITP Core 1 Fall 2010
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-258" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-258"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-53" name="item-group" value="53"> <label for="item-group-53">
-							CUNY ITUNESU Management Council Team
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-53" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-53"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-367" name="item-group" value="367"> <label for="item-group-367">
-							CUNY Instructional Design
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-367" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-367"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-55" name="item-group" value="55"> <label for="item-group-55">
-							CUNY Pie
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-55" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-55"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-1" name="item-group" value="1"> <label for="item-group-1">
-							CUNY Technology Group
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-1" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-1"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-1115" name="item-group" value="1115"> <label for="item-group-1115">
-							Collaborative Online International Learning (COIL)
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-1115" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-1115"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-667" name="item-group" value="667"> <label for="item-group-667">
-							Commons In A Box documentation and testing
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-667" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-667"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-1040" name="item-group" value="1040"> <label for="item-group-1040">
-							Computer Systems Technology Colloquium
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-1040" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-1040"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-253" name="item-group" value="253"> <label for="item-group-253">
-							Digital Humanities Initiative
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-253" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-253"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-224" name="item-group" value="224"> <label for="item-group-224">
-							Email Notification Test Group
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-224" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-224"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-214" name="item-group" value="214"> <label for="item-group-214">
-							Group Admins
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-214" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-214"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-1141" name="item-group" value="1141"> <label for="item-group-1141">
-							HSI Proposal – T.E.A.M.S.(squared)
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-1141" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-1141"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-526" name="item-group" value="526"> <label for="item-group-526">
-							Higher Education Certificate Program at Baruch
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-526" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-526"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-565" name="item-group" value="565"> <label for="item-group-565">
-							Hybrid Initiative Editorial Board
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-565" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-565"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-536" name="item-group" value="536"> <label for="item-group-536">
-							Hybrid Initiative Resource Builders Group
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-536" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-536"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-326" name="item-group" value="326"> <label for="item-group-326">
-							ITCP Core 2 Spring 2011
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-326" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-326"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-23" name="item-group" value="23"> <label for="item-group-23">
-							LMS (Blackboard and alternatives)
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-23" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-23"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-995" name="item-group" value="995"> <label for="item-group-995">
-							MEA/COMD Grants Planning
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-995" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-995"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-698" name="item-group" value="698"> <label for="item-group-698">
-							MOOCs and the like
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-698" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-698"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-265" name="item-group" value="265"> <label for="item-group-265">
-							Math Matters
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-265" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-265"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-1045" name="item-group" value="1045"> <label for="item-group-1045">
-							Media, Arts and Technology Discipline Council
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-1045" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-1045"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-506" name="item-group" value="506"> <label for="item-group-506">
-							Mobile Technology Research Group
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-506" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-506"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-1023" name="item-group" value="1023"> <label for="item-group-1023">
-							My Group Name Here
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-1023" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-1023"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-111" name="item-group" value="111"> <label for="item-group-111">
-							Online/Blended Learning Considerations
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-111" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-111"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-39" name="item-group" value="39"> <label for="item-group-39">
-							Open Education at CUNY
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-39" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-39"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-845" name="item-group" value="845"> <label for="item-group-845">
-							Planning CUNY Tech A+ episode: Academic Software Solutions
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-845" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-845"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-44" name="item-group" value="44"> <label for="item-group-44">
-							Project Stretch
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-44" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-44"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-1064" name="item-group" value="1064"> <label for="item-group-1064">
-							Promoting CUNY Research &amp; Recruiting Participants
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-1064" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-1064"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-931" name="item-group" value="931"> <label for="item-group-931">
-							STEM Teaching with Technology Colloquium: A New Catalyst for Learning
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-931" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-931"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-543" name="item-group" value="543"> <label for="item-group-543">
-							Sloan symposium proposal
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-543" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-543"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-204" name="item-group" value="204"> <label for="item-group-204">
-							Software Licensing Committee
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-204" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-204"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-697" name="item-group" value="697"> <label for="item-group-697">
-							Spring 2013 ITP Core II Course
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-697" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-697"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-1101" name="item-group" value="1101"> <label for="item-group-1101">
-							Test Files Group Chris
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-1101" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-1101"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-661" name="item-group" value="661"> <label for="item-group-661">
-							Test Group for BP Docs Spacing
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-661" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-661"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-1060" name="item-group" value="1060"> <label for="item-group-1060">
-							Testing #2
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-1060" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-1060"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-210" name="item-group" value="210"> <label for="item-group-210">
-							The Group for Group Admins
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-210" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-210"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-1094" name="item-group" value="1094"> <label for="item-group-1094">
-							The Teaching and Learning Center
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-1094" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-1094"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-137" name="item-group" value="137"> <label for="item-group-137">
-							Videoconferencing
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-137" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-137"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-50" name="item-group" value="50"> <label for="item-group-50">
-							Wordpress HELP!!
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-50" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-50"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-136" name="item-group" value="136"> <label for="item-group-136">
-							chris's test group
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-136" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-136"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-19" name="item-group" value="19"> <label for="item-group-19">
-							ePortfolios
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-19" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-19"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-351" name="item-group" value="351"> <label for="item-group-351">
-							hidden chris
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-351" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-351"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-591" name="item-group" value="591"> <label for="item-group-591">
-							hidden foo
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-591" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-591"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-840" name="item-group" value="840"> <label for="item-group-840">
-							social paper
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-840" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-840"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-group-962" name="item-group" value="962"> <label for="item-group-962">
-							test and delete
-						</label>
-                                        <div class="membership-role-selector"><label for="role-group-962" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-group-962"><option value="">Assign a role</option> <option value="member">
-			Member
-		</option><option value="mod">
-			Moderator
-		</option><option value="admin">
-			Administrator
-		</option></select></div>
+                Select a role
+            </label> <select id="role-group-465"><option value="">Assign a role</option> <option value="member">
+                    Member
+                </option><option value="mod">
+                    Moderator
+                </option><option value="admin">
+                    Administrator
+                </option></select></div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <!---->
-                        <!---->
-                    </div>
-                </div>
-                <div class="panel-subsection panel-subsection-site-membership">
-                    <h2>Add Invites to Join Your Sites</h2>
-                    <div class="membership-selector">
-                        <p>You can only invite people to sites which you administer.</p>
-                        <div class="membership-item-selector">
-                            <div class="membership-selector-gloss">
-                                Select which site to include below.
-                            </div>
-                            <div class="membership-items scrollbox">
+                        <div class="form-part join-sites not-visible">
+                           <p>Sites only appear here if you are a site admin.</p>
+<!--                           <p>You can only invite people to sites which you administer.</p>-->
+<!--                            <label for="join-sites">If you're allowed to send an invitation for a site, you will see it in this list.</label>-->
+                            <div class="scrollbox" id="join-sites">
                                 <ul>
-                                    <li><input type="checkbox" id="item-site-579" name="item-site" value="579"> <label for="item-site-579">
-							Another Chris hidden
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-579" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-579"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-542" name="item-site" value="542"> <label for="item-site-542">
-							BMCC Assessment Committee
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-542" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-542"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-1887" name="item-site" value="1887"> <label for="item-site-1887">
-							BMCC ESL LAB
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-1887" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-1887"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-2174" name="item-site" value="2174"> <label for="item-site-2174">
-							BMCC NT Advisory Committee
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-2174" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-2174"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-778" name="item-site" value="778"> <label for="item-site-778">
-							CAC Community Team - Project Planning
-						</label>
+                                    <li><div class="item-group"><input type="checkbox" id="item-site-778" name="item-site" value="778"> <label for="item-site-778">
+                                    CAC Community Team - Project Planning
+                                        </label></div>
                                         <div class="membership-role-selector"><label for="role-site-778" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-778"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
+                Select a role
+            </label> <select id="role-site-778"><option value="">Assign a role</option> <option value="subscriber">
+                    Subscriber
+                </option><option value="contributor">
+                    Contributor
+                </option><option value="author">
+                    Author
+                </option><option value="editor">
+                    Editor
+                </option><option value="administrator">
+                    Administrator
+                </option></select></div>
                                     </li>
-                                    <li><input type="checkbox" id="item-site-2071" name="item-site" value="2071"> <label for="item-site-2071">
-							CAC Team Group Blog
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-2071" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-2071"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
+                                    <li><div class="item-group"><input type="checkbox" id="item-site-15" name="item-site" value="15"> <label for="item-site-15">
+                                    CUNY Academic Commons News
+                                        </label></div>
+                                        <div class="membership-role-selector"><label for="role-site-15" class="screen-reader-only">
+                Select a role
+            </label> <select id="role-site-15"><option value="">Assign a role</option> <option value="subscriber">
+                    Subscriber
+                </option><option value="contributor">
+                    Contributor
+                </option><option value="author">
+                    Author
+                </option><option value="editor">
+                    Editor
+                </option><option value="administrator">
+                    Administrator
+                </option></select></div>
                                     </li>
-                                    <li><input type="checkbox" id="item-site-1" name="item-site" value="1"> <label for="item-site-1">
-							CUNY Academic Commons
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-1" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-1"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
+                                    <li><div class="item-group"><input type="checkbox" id="item-site-1050" name="item-site" value="1050"> <label for="item-site-1050">
+                                    CUNY.is/LIVE
+                                        </label></div>
+                                        <div class="membership-role-selector"><label for="role-site-1050" class="screen-reader-only">
+                Select a role
+            </label> <select id="role-site-1050"><option value="">Assign a role</option> <option value="subscriber">
+                    Subscriber
+                </option><option value="contributor">
+                    Contributor
+                </option><option value="author">
+                    Author
+                </option><option value="editor">
+                    Editor
+                </option><option value="administrator">
+                    Administrator
+                </option></select></div>
                                     </li>
-                                    <li><input type="checkbox" id="item-site-2076" name="item-site" value="2076"> <label for="item-site-2076">
-							CUNY Central Server: A Discussion...
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-2076" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-2076"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-2203" name="item-site" value="2203"> <label for="item-site-2203">
-							CUNY Commons Redesign 2015
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-2203" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-2203"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-393" name="item-site" value="393"> <label for="item-site-393">
-							CUNY Digital Humanities Initiative
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-393" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-393"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-259" name="item-site" value="259"> <label for="item-site-259">
-							CUNY Hybrid Initiative
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-259" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-259"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-382" name="item-site" value="382"> <label for="item-site-382">
-							CUNY ITP Core 1 Blog Fall 2010
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-382" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-382"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-73" name="item-site" value="73"> <label for="item-site-73">
-							CUNY Pie
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-73" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-73"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-2528" name="item-site" value="2528"> <label for="item-site-2528">
-							Collaborative Online International Learning (COIL)
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-2528" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-2528"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-1753" name="item-site" value="1753"> <label for="item-site-1753">
-							Commons Use Cases
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-1753" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-1753"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-609" name="item-site" value="609"> <label for="item-site-609">
-							Found Photos
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-609" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-609"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-389" name="item-site" value="389"> <label for="item-site-389">
-							Ground Control
-						</label>
+                                    <li><div class="item-group"><input type="checkbox" id="item-site-389" name="item-site" value="389"> <label for="item-site-389">
+                                    Ground Control
+                                        </label></div>
                                         <div class="membership-role-selector"><label for="role-site-389" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-389"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
+                Select a role
+            </label> <select id="role-site-389"><option value="">Assign a role</option> <option value="subscriber">
+                    Subscriber
+                </option><option value="contributor">
+                    Contributor
+                </option><option value="author">
+                    Author
+                </option><option value="editor">
+                    Editor
+                </option><option value="administrator">
+                    Administrator
+                </option></select></div>
                                     </li>
-                                    <li><input type="checkbox" id="item-site-115" name="item-site" value="115"> <label for="item-site-115">
-							Help &amp; Support
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-115" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-115"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
+                                    <li><div class="item-group"><input type="checkbox" id="item-site-320" name="item-site" value="320"> <label for="item-site-320">
+                                    Hybrid Initiative
+                                        </label></div>
+                                        <div class="membership-role-selector"><label for="role-site-320" class="screen-reader-only">
+                Select a role
+            </label> <select id="role-site-320"><option value="">Assign a role</option> <option value="subscriber">
+                    Subscriber
+                </option><option value="contributor">
+                    Contributor
+                </option><option value="author">
+                    Author
+                </option><option value="editor">
+                    Editor
+                </option><option value="administrator">
+                    Administrator
+                </option></select></div>
                                     </li>
-                                    <li><input type="checkbox" id="item-site-1020" name="item-site" value="1020"> <label for="item-site-1020">
-							Hybrid Initiative
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-1020" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-1020"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
+                                    <li><div class="item-group"><input type="checkbox" id="item-site-351" name="item-site" value="351"> <label for="item-site-351">
+                                    It Cannot Be Trivial
+                                        </label></div>
+                                        <div class="membership-role-selector"><label for="role-site-351" class="screen-reader-only">
+                Select a role
+            </label> <select id="role-site-351"><option value="">Assign a role</option> <option value="subscriber">
+                    Subscriber
+                </option><option value="contributor">
+                    Contributor
+                </option><option value="author">
+                    Author
+                </option><option value="editor">
+                    Editor
+                </option><option value="administrator">
+                    Administrator
+                </option></select></div>
                                     </li>
-                                    <li><input type="checkbox" id="item-site-911" name="item-site" value="911"> <label for="item-site-911">
-							Hybrid Initiative Resource Builders Group
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-911" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-911"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-539" name="item-site" value="539"> <label for="item-site-539">
-							ITCP Core 2 Spring 2011
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-539" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-539"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-1290" name="item-site" value="1290"> <label for="item-site-1290">
-							Interactive Technology and the University: Core II
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-1290" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-1290"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-838" name="item-site" value="838"> <label for="item-site-838">
-							Mobile Technology Research Group
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-838" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-838"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-2227" name="item-site" value="2227"> <label for="item-site-2227">
-							My Group Name Here
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-2227" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-2227"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-1967" name="item-site" value="1967"> <label for="item-site-1967">
-							STEM Teaching with Technology Colloquium: A New Ca
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-1967" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-1967"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-877" name="item-site" value="877"> <label for="item-site-877">
-							School of Public Affairs Higher Education Executiv
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-877" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-877"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-2496" name="item-site" value="2496"> <label for="item-site-2496">
-							Site for Test Files Group Chris
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-2496" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-2496"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-7" name="item-site" value="7"> <label for="item-site-7">
-							Tech in the Trenches
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-7" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-7"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-2425" name="item-site" value="2425"> <label for="item-site-2425">
-							The Teaching and Learning Center
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-2425" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-2425"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-203" name="item-site" value="203"> <label for="item-site-203">
-							Videoconferencing
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-203" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-203"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-209" name="item-site" value="209"> <label for="item-site-209">
-							cs
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-209" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-209"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-796" name="item-site" value="796"> <label for="item-site-796">
-							delete blog stein
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-796" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-796"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-9" name="item-site" value="9"> <label for="item-site-9">
-							ePortfolios
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-9" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-9"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-960" name="item-site" value="960"> <label for="item-site-960">
-							eportfolio and high impact practices
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-960" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-960"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-1033" name="item-site" value="1033"> <label for="item-site-1033">
-							foo
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-1033" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-1033"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-580" name="item-site" value="580"> <label for="item-site-580">
-							hidden chris
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-580" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-580"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-1815" name="item-site" value="1815"> <label for="item-site-1815">
-							social paper
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-1815" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-1815"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-2649" name="item-site" value="2649"> <label for="item-site-2649">
-							teams2
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-2649" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-2649"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
-                                    </li>
-                                    <li><input type="checkbox" id="item-site-578" name="item-site" value="578"> <label for="item-site-578">
-							test adding group
-						</label>
-                                        <div class="membership-role-selector"><label for="role-site-578" class="screen-reader-only">
-		Select a role
-	</label> <select id="role-site-578"><option value="">Assign a role</option> <option value="subscriber">
-			Subscriber
-		</option><option value="contributor">
-			Contributor
-		</option><option value="author">
-			Author
-		</option><option value="editor">
-			Editor
-		</option><option value="administrator">
-			Administrator
-		</option></select></div>
+                                    <li><div class="item-group"><input type="checkbox" id="item-site-695" name="item-site" value="695"> <label for="item-site-695">
+                                    Moment: Une Revue de Photo
+                                        </label></div>
+                                        <div class="membership-role-selector"><label for="role-site-695" class="screen-reader-only">
+                Select a role
+            </label> <select id="role-site-695"><option value="">Assign a role</option> <option value="subscriber">
+                    Subscriber
+                </option><option value="contributor">
+                    Contributor
+                </option><option value="author">
+                    Author
+                </option><option value="editor">
+                    Editor
+                </option><option value="administrator">
+                    Administrator
+                </option></select></div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <!---->
-                        <!---->
-                    </div>
-                </div>
+<!--                        <input type="submit" value="Add Memberships">-->
+                    </form>
+                </section>
             </div>
             <div class="caco-modal-nav">
                 <div class="nav-buttons"><button class="modal-nav-button modal-nav-button-left">
@@ -1645,13 +328,17 @@
                     <li class="">
                         3. Review &amp; Submit
                     </li>
+<!--
                     <li class="">
                         4. Confirmation
                     </li>
+-->
                 </ul>
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="js/new-javascript.js"></script>
 </body>
 
 </html>

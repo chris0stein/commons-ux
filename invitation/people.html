@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bp-event-organiser.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/dashicons.min.css">
+    <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/fee-adminbar.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/gd-bbpress-attachments.css">
@@ -21,6 +22,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style(1).css">
     <link rel="stylesheet" href="css/validationEngine.jquery.css">
+
+    <link rel="stylesheet" href="css/new-styling.css">
 
     <!--    script[type="text/javascript"]:src-->
     <script src="js/jquery.js" type="text/javascript"></script>
@@ -46,30 +49,31 @@
                 <p>There are two ways to invite people to the Commons:</p>
                 <ol>
                     <li>You can invite existing Commons members by name</li>
-                    <li>You can enter a CUNY email address</li>
+                    <li>You can invite new members by their CUNY email address</li>
                 </ol>
-                <div class="panel-subsection panel-subsection-invite-by-name">
-                    <h2>Invite by Name</h2>
-                    <p>Type the name or username of an existing Commons member in the box below. If you can’t find them this way you can invite them by email below and it will still work.</p>
-                    <div>
-                        <div class=""><label for="caco-invite-by-name" class="screen-reader-text">Invite by Name</label>
-                            <div class="new-item-field  autocomplete-wrapper"><input type="text" id="caco-acbn-field" placeholder="Type a name to invite" autocomplete="off" class=" autocomplete-input">
-                                <div class=" autocomplete autocomplete-list" style="display: none;">
-                                    <ul></ul>
+                <div class="panel">
+                    <div class="panel-subsection panel-subsection-invite-by-name">
+                        <h2>Invite by Name</h2>
+                        <p>Type the name or username of an existing Commons member in the box below. If you can’t find them this way you can invite them by email below and it will still work.</p>
+                        <div>
+                            <div class=""><label for="caco-invite-by-name" class="screen-reader-text">Invite by Name</label>
+                                <div class="new-item-field  autocomplete-wrapper"><input type="text" id="caco-acbn-field" placeholder="Type a name to invite" autocomplete="off" class=" autocomplete-input">
+                                    <div class=" autocomplete autocomplete-list" style="display: none;">
+                                        <ul></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="invited-by-name invited-by-name-empty">
-                            <ul class="invite-by-name-items"></ul>
+                            <div class="invited-by-name invited-by-name-empty">
+                                <ul class="invite-by-name-items"></ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel-subsection panel-subsection-invite-by-email">
-                    <h2>Invite by Email</h2>
-                    <p>Separate email addresses with a comma or semicolon, or put them on separate lines. The following email domains are allowed: <span><code>cuny.tv</code>, <code>cuny.edu</code>, <code>gmail.com</code></span>.</p>
-                    <!---->
-                    <!---->
-                    <div contenteditable="true" id="invite-by-email-contenteditable" class="invite-by-email-contenteditable"></div>
+                    <div class="panel-subsection panel-subsection-invite-by-email">
+                        <h2>Invite by Email</h2>
+                        <p>Separate email addresses with a comma or semicolon, or put them on separate lines. The following email domains are allowed: <span><code>cuny.tv</code>, <code>cuny.edu</code>, <code>gmail.com</code></span>.</p>
+
+                        <div contenteditable="true" id="invite-by-email-contenteditable" class="invite-by-email-contenteditable"></div>
+                    </div>
                 </div>
             </div>
             <div class="caco-modal-nav">
@@ -89,9 +93,11 @@
                     <li class="">
                         3. Review &amp; Submit
                     </li>
+<!--
                     <li class="">
                         4. Confirmation
                     </li>
+-->
                 </ul>
             </div>
         </div>
