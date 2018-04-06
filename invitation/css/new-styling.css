@@ -282,6 +282,14 @@ Review page
     box-sizing: border-box;
 }
 
+.review .review-info{
+    font-size: 1.15em;
+}
+
+.review .panel-subsection p{
+    margin-bottom: 5px;
+}
+
 @media screen and (min-width:700px){
 /*    break action buttons into two columns*/
     .review .people, .review .membership{
