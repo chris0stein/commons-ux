@@ -49,12 +49,16 @@
                     <p>All invitees will be asked to join the CUNY Academic Commons if they aren't already a member.</p>
                 </div>
                 <section class="form-area">
-                    <nav class="form-nav">
-                        <ul class="tabs">
-                            <li class="tabs-tab tab-selected">Invite to Groups</li>
-                            <li class="tabs-tab">Invite to Sites</li>
-                        </ul>
-                    </nav>
+                    <div id="cacap-tabs">
+                        <div class="cacap-row">
+                            <ul >
+                                <li class="cacap-tab current-tab"><a href="#">Invite to Groups</a></li>
+                                <li class="cacap-tab"><a href="#">Invite to Sites</a></li>
+                                <div style="clear: both;"></div><!-- needed because of commons float styling. copied from commons. keeps the ul border line below the tabs. -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div> <!-- needed because of commons float styling. copied from commons. -->
 
                     <form id="choose-memberships" action="#">
                         <div class="form-part join-groups">
@@ -308,6 +312,8 @@
                         </div>
 <!--                        <input type="submit" value="Add Memberships">-->
                     </form>
+
+
                 </section>
             </div>
             <div class="caco-modal-nav">

@@ -209,6 +209,7 @@ Membership page
 }
 
 
+
 /*
 ---------------------
 Michael's tab styling
@@ -263,6 +264,51 @@ form {
 .not-visible {
     display: none;
 }
+
+/*
+---------------------
+Updated tab styling: Outline
+
+This has some minor updates to the tab styling in screen.css that styles the tabs on the member pages
+---------------------
+*/
+
+#cacap-tabs li{
+    /* adding this means things don't shift when the hover adds a color */
+    border-top: 2px solid transparent;
+}
+/*Adding in a hover for tab that puts in the top border*/
+#cacap-tabs li:hover {
+    border-top: 2px solid #65CEF5;
+}
+
+
+#cacap-tabs a {
+/*    darkening the color, rest stays the same*/
+    color: #5f5f5f;
+}
+
+#cacap-tabs li.current-tab {
+/*    changing top border, darker, thicker, rest stays the same*/
+    border-top: 2px solid #666;
+}
+
+#cacap-tabs li.current-tab a {
+    /* put color in bottom border rule */
+    border-bottom: 1px solid #fff;
+/*    border-bottom-color: #fff; by changing the color in above this line is unneccessary*/
+
+/*    remove border radius*/
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+     border-radius: none;
+}
+
+
+
+
+
+
 
 
 
