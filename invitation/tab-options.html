@@ -49,6 +49,14 @@
                     <h2>Commons Membership</h2>
                     <p>All invitees will be asked to join the CUNY Academic Commons if they aren't already a member.</p>
                 </div>
+
+                <section class="divider">
+                    <div>
+                        <hr>
+                        <h2>OPTION 1</h2>
+                    </div>
+                </section>
+
                 <section class="form-area">
                     <div id="cacap-tabs">
                         <div class="cacap-row">
@@ -328,6 +336,7 @@
 
                 <section class="divider">
                     <hr>
+                    <h2>OPTION 2</h2>
                 </section>
 
                 <section class="form-area">
@@ -608,8 +617,9 @@
                 </section>
 
                 <section class="divider">
-                    <div >
+                    <div>
                         <hr>
+                        <h2>OPTION 3</h2>
                         <p>Using just background color for tabs and no borders requires an outer background color other than white.</p>
                     </div>
                 </section>
@@ -884,10 +894,10 @@
                     <!--    end tab wrapper-->
                 </section>
 
-                 <section class="divider">
-                    <div >
+                <section class="divider">
+                    <div>
                         <hr>
-                        <p></p>
+                        <h2>OPTION 4</h2>
                     </div>
                 </section>
                 <section class="option-4">
@@ -1198,47 +1208,48 @@
     </div>
 
     <script type="text/javascript" src="js/new-javascript.js"></script>
-<!--    <script type="text/javascript" src="js/new-tabs.js"></script>-->
+    <!--    <script type="text/javascript" src="js/new-tabs.js"></script>-->
     <script type="text/javascript">
-        (function($){
+        (function($) {
 
             //This code taken from
-//https://codepen.io/docode/pen/ZGvoXz
-//Allows for multiple tab optoin on same page with same JS. used on tab-options.html to show different tab options
-          console.log("ready");
-          var $wrapper = $('.tab-wrapper'),
-              $allTabs = $wrapper.find('.tab-content > div'),
-              $tabMenu = $wrapper.find('.tab-menu li'),
-              $line = $('<div class="line"></div>').appendTo($tabMenu);
+            //https://codepen.io/docode/pen/ZGvoXz
+            //Allows for multiple tab optoin on same page with same JS. used on tab-options.html to show different tab options
+            console.log("ready");
+            var $wrapper = $('.tab-wrapper'),
+                $allTabs = $wrapper.find('.tab-content > div'),
+                $tabMenu = $wrapper.find('.tab-menu li'),
+                $line = $('<div class="line"></div>').appendTo($tabMenu);
 
-          $allTabs.not(':first-of-type').hide();
-          $tabMenu.filter(':first-of-type').find(':first').width('100%')
+            $allTabs.not(':first-of-type').hide();
+            $tabMenu.filter(':first-of-type').find(':first').width('100%')
 
-          $tabMenu.each(function(i) {
-            $(this).attr('data-tab', 'tab'+i);
-          });
+            $tabMenu.each(function(i) {
+                $(this).attr('data-tab', 'tab' + i);
+            });
 
-          $allTabs.each(function(i) {
-            $(this).attr('data-tab', 'tab'+i);
-          });
+            $allTabs.each(function(i) {
+                $(this).attr('data-tab', 'tab' + i);
+            });
 
-          $tabMenu.on('click', function() {
-            console.log("click");
-            var dataTab = $(this).data('tab'),
-                $getWrapper = $(this).closest($wrapper);
+            $tabMenu.on('click', function() {
+                console.log("click");
+                var dataTab = $(this).data('tab'),
+                    $getWrapper = $(this).closest($wrapper);
 
-            $getWrapper.find($tabMenu).removeClass('active');
-            $(this).addClass('active');
+                $getWrapper.find($tabMenu).removeClass('active');
+                $(this).addClass('active');
 
-            $getWrapper.find('.line').width(0);
-            $(this).find($line).animate({'width':'100%'}, 'fast');
-            $getWrapper.find($allTabs).hide();
-            $getWrapper.find($allTabs).filter('[data-tab='+dataTab+']').show();
-          });
+                $getWrapper.find('.line').width(0);
+                $(this).find($line).animate({
+                    'width': '100%'
+                }, 'fast');
+                $getWrapper.find($allTabs).hide();
+                $getWrapper.find($allTabs).filter('[data-tab=' + dataTab + ']').show();
+            });
 
 
         })(jQuery);
-
 
     </script>
 </body>
