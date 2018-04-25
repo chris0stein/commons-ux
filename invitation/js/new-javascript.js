@@ -22,7 +22,6 @@ var formPart = document.querySelectorAll(".form-part");
 // sorry, didn't have time to use the same code as tabs on portfolio pages.
 var cacapTab = document.querySelectorAll(".cacap-tab");
 var cacapPart = document.querySelectorAll(".cacap-part");
-
 [].forEach.call(cacapTab, function(tab, i, cacapTab) {
     tab.addEventListener('click', function() {
         [].forEach.call(cacapTab, function(tab, i) {
