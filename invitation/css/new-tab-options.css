@@ -1,0 +1,142 @@
+/*
+=======================================================
+styling related to tab options on tab-options.html page
+=======================================================
+*/
+
+section.divider{
+    margin: 4em;
+}
+
+/* ---------------------------------------------------
+option 1
+*/
+/*This is handled already in new-styling.css*/
+
+
+
+/* ---------------------------------------------------
+option 2
+*/
+#cacap-tabs.option-2 li{
+
+/*    color: white;*/
+    background-color: #e6e6e6;
+    border-top: 2px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    margin-right: 10px;
+}
+#cacap-tabs.option-2 li.current-tab{
+    background-color: #fff;
+    border-top: 4px solid #65CEF5;
+    border-left: 1px solid #5f5f5f;
+    border-right: 1px solid #5f5f5f;
+}
+
+#cacap-tabs.option-2 a{
+/*    color: white;*/
+}
+
+/* ---------------------------------------------------
+option 3
+*/
+section.option-3{
+    background-color: #888;
+    padding: 1em;
+}
+
+/* ----------------
+below styling from https://codepen.io/docode/pen/ZGvoXz*/
+
+
+.tab-wrapper {
+ /* margin: 60px auto;
+
+  width: 70%;
+  max-width:500px;
+*/
+}
+
+.tab-menu li {
+  position:relative;
+  background-color: #e6e6e6;
+  color:#555;
+  display: inline-block;
+  padding: 20px 40px;
+/*  opacity: 0.8;*/
+  cursor:pointer;
+  z-index:0;
+}
+
+.tab-menu li:hover {
+  color:#464646;
+}
+
+.tab-menu li.active {
+  color:#464646;
+  background-color: #fff;
+/*  opacity: 1;*/
+}
+
+.tab-menu li.active:hover {
+  color:#464646;
+}
+
+.tab-content>div {
+  background-color: #fff;
+  box-sizing:border-box;
+  width: 100%;
+/*  padding: 50px;   */
+  min-height:200px;
+}
+
+.tab-content>div>p{
+    padding: 1em;
+}
+
+.line {
+  position:absolute;
+  width: 0;
+  height: 7px;
+  background-color: #65CEF5;
+  top: 0;
+  left: 0;
+}
+/*
+
+end styling from https://codepen.io/docode/pen/ZGvoXz
+----------------------------
+*/
+
+
+/* ---------------------------------------------------
+option 4 pill buttons
+*/
+section.option-4{
+
+}
+
+/*
+adjustments to styling from https://codepen.io/docode/pen/ZGvoXz
+to acheive pill buttons
+*/
+
+.option-4 .tab-menu li{
+    border-radius: 2em;
+    margin-right: 1em;
+}
+
+.option-4 .tab-menu li:hover {
+    background-color: #65cef5;
+}
+
+.option-4 .tab-menu li.active {
+  background-color: #65cef5;
+}
+
+/*hide the line, we don't need it (it's added in JS)*/
+.option-4 .line {
+  display: none;
+}
+
